@@ -12,6 +12,7 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@fontsource/gabriela": "^5.2.8",
     "@tailwindcss/vite": "^4.2.4",
     "astro": "^6.3.0",
     "tailwindcss": "^4.2.4"

@@ -3,3 +3,7 @@
 @theme {
     --color-gold: #C97515;
 }
+
+:root {
+    background-color: var(--color-black);
+}
