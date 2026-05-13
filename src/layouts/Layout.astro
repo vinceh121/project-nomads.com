@@ -1,11 +1,24 @@
 ---
 import BaseLayout from './BaseLayout.astro'
+
+const paths = [
+    {path: '/game/', name: 'Game'},
+    {path: '/screenshots/', name: 'Screenshots'},
+    {path: '/download/', name: 'Download'},
+    {path: '/community/', name: 'Community'},
+    {path: '/about/', name: 'About'},
+];
 ---
 
 <BaseLayout>
-    <div class="w-full">
+    <nav class="w-full flex justify-evenly text-bronze font-gabriela font-bold text-xl py-3 bg-neutral-950/20 absolute top-0 z-10">
+        {
+            paths.map(
+                ({path, name}) =>
+                    <a class="duration-150 transition-all hover:brightness-150 hover:drop-shadow-lg hover:drop-shadow-bronze" href={path}>{name}</a>
+            )
+        }
+    </nav>
 
-    </div>
-
-    <slot />
+    <slot/>
 </BaseLayout>

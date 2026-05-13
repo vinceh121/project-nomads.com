@@ -1,9 +1,14 @@
-@import "tailwindcss";
+@import 'tailwindcss';
+@import '@fontsource/gabriela';
 
 @theme {
     --color-gold: #C97515;
+    --color-bronze: #e8d6a5;
+
+    --font-gabriela: 'Gabriela', serif;
 }
 
 :root {
+    color: var(--color-white);
     background-color: var(--color-black);
 }
