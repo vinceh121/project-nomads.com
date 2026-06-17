@@ -12,3 +12,13 @@
     color: var(--color-white);
     background-color: var(--color-black);
 }
+
+@layer base {
+    h2 {
+        @apply text-gold text-xl font-semibold;
+    }
+
+    p {
+        @apply py-2;
+    }
+}

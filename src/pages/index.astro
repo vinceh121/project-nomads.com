@@ -3,16 +3,45 @@ import '../styles/global.css'
 import Layout from '../layouts/Layout.astro';
 import Image from 'astro/components/Image.astro';
 import hero from '../assets/hero.png';
-import Header from "../components/Header.astro";
-
 ---
 
 <Layout>
-	<div class="">
-		<Image alt="" src={hero} class="w-full mask-b-from-80%" />
+    <div>
+        <Image alt="Project Nomads" src={hero} class="w-full mask-b-from-80%"/>
     </div>
 
-	<main class="px-3 pt-10">
-		<Header>After the disaster!</Header>
+    <main class="pt-10 px-100">
+        <h2 class="text-center">After the disaster!</h2>
+
+        <p class="text-center">
+            <em>Project Nomads</em> is set on the planet Aeres, a fantastic world of gigantic floating islands.
+        </p>
+        <p class="text-center">
+            Your battleship island glides majestically through the clouds. You are a nomad, a restless wanderer
+            forever
+            in pursuit of adventure.
+        </p>
+        <p class="text-center">
+            Discover other islands, master the magic skills of the arcane master builders and explore the ruins of
+            their
+            long forgotten culture.
+        </p>
+        <p class="text-center">
+            Use the mysterious artifacts of the master builders to erect factories, power plants and formidable gun
+            towers on your flying island and prepare yourself for the many challenges that await you.
+        </p>
+        <p class="text-center">
+            Command airplanes, biplanes, modern fighters and bombers in the struggle for the priceless magical
+            artifacts, while your island pushes forward into new, hitherto unknown regions of the world.
+        </p>
+        <p class="text-center">
+            Project Nomads combines the gameplay of an action shooter with that of a real-time strategy and the
+            complex
+            story of a role-playing game.
+        </p>
+        <p class="text-center">
+            <strong class="text-gold">The adventure begins...</strong>
+        </p>
+
     </main>
 </Layout>
