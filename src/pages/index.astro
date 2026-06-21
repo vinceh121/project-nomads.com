@@ -1,13 +1,13 @@
 ---
 import '../styles/global.css'
 import Layout from '../layouts/Layout.astro';
-import Image from 'astro/components/Image.astro';
 import hero from '../assets/hero.png';
+import { Picture } from 'astro:assets';
 ---
 
 <Layout>
     <div>
-        <Image alt="Project Nomads" src={hero} class="w-full mask-b-from-80%"/>
+        <Picture alt="Project Nomads" formats={['avif', 'webp']} layout='full-width' src={hero} class="w-full mask-b-from-80%"/>
     </div>
 
     <main class="pt-10 px-100">
