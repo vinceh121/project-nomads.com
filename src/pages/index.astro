@@ -1,47 +1,80 @@
 ---
-import '../styles/global.css'
-import Layout from '../layouts/Layout.astro';
-import hero from '../assets/hero.png';
-import { Picture } from 'astro:assets';
+import "../styles/global.css";
+import Layout from "../layouts/Layout.astro";
+import hero from "../assets/hero.png";
+import artefacts from "../assets/home/artefacts.png";
+import { Picture } from "astro:assets";
 ---
 
 <Layout>
-    <div>
-        <Picture alt="Project Nomads" formats={['avif', 'webp']} layout='full-width' src={hero} class="w-full mask-b-from-80%"/>
-    </div>
+	<div>
+		<Picture
+			alt="Project Nomads"
+			formats={["avif", "webp"]}
+			layout="full-width"
+			src={hero}
+			class="w-full mask-b-from-80%"
+		/>
+	</div>
 
-    <main class="pt-10 px-100">
-        <h2 class="text-center">After the disaster!</h2>
+	<main class="pt-10">
+		<div class="px-100 text-center">
+			<h2>After the disaster!</h2>
 
-        <p class="text-center">
-            <em>Project Nomads</em> is set on the planet Aeres, a fantastic world of gigantic floating islands.
-        </p>
-        <p class="text-center">
-            Your battleship island glides majestically through the clouds. You are a nomad, a restless wanderer
-            forever
-            in pursuit of adventure.
-        </p>
-        <p class="text-center">
-            Discover other islands, master the magic skills of the arcane master builders and explore the ruins of
-            their
-            long forgotten culture.
-        </p>
-        <p class="text-center">
-            Use the mysterious artifacts of the master builders to erect factories, power plants and formidable gun
-            towers on your flying island and prepare yourself for the many challenges that await you.
-        </p>
-        <p class="text-center">
-            Command airplanes, biplanes, modern fighters and bombers in the struggle for the priceless magical
-            artifacts, while your island pushes forward into new, hitherto unknown regions of the world.
-        </p>
-        <p class="text-center">
-            Project Nomads combines the gameplay of an action shooter with that of a real-time strategy and the
-            complex
-            story of a role-playing game.
-        </p>
-        <p class="text-center">
-            <strong class="text-gold">The adventure begins...</strong>
-        </p>
+			<p>
+				<em>Project Nomads</em> is set on the planet Aeres, a fantastic world of gigantic
+				floating islands.
+			</p>
+			<p>
+				Your battleship island glides majestically through the clouds. You are a
+				nomad, a restless wanderer forever in pursuit of adventure.
+			</p>
+			<p>
+				Discover other islands, master the magic skills of the arcane master
+				builders and explore the ruins of their long forgotten culture.
+			</p>
+			<p>
+				Use the mysterious artifacts of the master builders to erect factories,
+				power plants and formidable gun towers on your flying island and prepare
+				yourself for the many challenges that await you.
+			</p>
+			<p>
+				Command airplanes, biplanes, modern fighters and bombers in the struggle for
+				the priceless magical artifacts, while your island pushes forward into new,
+				hitherto unknown regions of the world.
+			</p>
+			<p>
+				Project Nomads combines the gameplay of an action shooter with that of a
+				real-time strategy and the complex story of a role-playing game.
+			</p>
+			<p>
+				<strong class="text-gold">The adventure begins...</strong>
+			</p>
+		</div>
 
-    </main>
+		<div class="mt-30 px-50">
+			<div class="flex flex-row gap-10">
+				<div class="w-100">
+					<Picture
+						alt="Magical artifacts layed out on a floating island."
+						src={artefacts}
+						formats={["avif", "webp"]}
+						layout="full-width"
+					/>
+				</div>
+				<div class="grow self-center">
+                    <h3>
+                        Ancient powerful artifacts
+                    </h3>
+					<p>
+						The ancient knowledge of the master builders is stored in magical
+						artifacts. These are the most priceless things in the world.
+					</p>
+					<p>
+						A large number of different artifacts may be found all over the world.
+					</p>
+				</div>
+			</div>
+		</div>
+	</main>
 </Layout>

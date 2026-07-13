@@ -18,6 +18,10 @@
         @apply text-gold text-xl font-semibold;
     }
 
+    h3 {
+        @apply text-gold text-lg font-semibold;
+    }
+
     p {
         @apply py-2;
     }
