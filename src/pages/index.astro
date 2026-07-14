@@ -4,6 +4,7 @@ import Layout from "../layouts/Layout.astro";
 import hero from "../assets/hero.png";
 import artefacts from "../assets/home/artefacts.png";
 import { Picture } from "astro:assets";
+import Blurb from "../components/Blurb.astro";
 ---
 
 <Layout>
@@ -53,28 +54,29 @@ import { Picture } from "astro:assets";
 		</div>
 
 		<div class="mt-30 px-50">
-			<div class="flex flex-row gap-10">
-				<div class="w-100">
-					<Picture
-						alt="Magical artifacts layed out on a floating island."
-						src={artefacts}
-						formats={["avif", "webp"]}
-						layout="full-width"
-					/>
-				</div>
-				<div class="grow self-center">
-                    <h3>
-                        Ancient powerful artifacts
-                    </h3>
-					<p>
-						The ancient knowledge of the master builders is stored in magical
-						artifacts. These are the most priceless things in the world.
-					</p>
-					<p>
-						A large number of different artifacts may be found all over the world.
-					</p>
-				</div>
-			</div>
+			<Blurb
+				picture={artefacts}
+				pictureAlt="Magical artifacts layed out on a floating island."
+			>
+				<h3>Ancient powerful artifacts</h3>
+				<p>
+					The ancient knowledge of the master builders is stored in magical
+					artifacts. These are the most priceless things in the world.
+				</p>
+				<p>
+					A large number of different artifacts may be found all over the world.
+				</p>
+			</Blurb>
+            <Blurb
+				picture={artefacts}
+				pictureAlt=""
+                reverse={true}
+			>
+				<h3>Battleship islands</h3>
+				<p>
+                    Your own island is a battleship bla bla bla
+				</p>
+			</Blurb>
 		</div>
 	</main>
 </Layout>
