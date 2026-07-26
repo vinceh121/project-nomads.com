@@ -1,0 +1,27 @@
+---
+import myabandonware from '../../assets/myabandonware.png';
+import internetarchive from '../../assets/internetarchive.png';
+import Picture from 'astro/components/Picture.astro';
+
+const {
+	title,
+	href,
+	image,
+} = Astro.props as {
+	title?: string,
+	href: string,
+	image: 'myabandonware'|'internetarchive',
+};
+
+const actualImage = ({
+	myabandonware,
+	internetarchive,
+})[image];
+---
+
+<li class="size-50">
+	<a href={href} target="_blank" class="relative flex flex-col items-center justify-center p-2 size-full border border-gold/60 hover:border-gold transition-colors">
+		<Picture src={actualImage} alt="" height="128" />
+		{title && <h4 class="absolute bottom-0.5">{ title }</h4>}
+	</a>
+</li>

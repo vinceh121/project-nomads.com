@@ -1,5 +1,7 @@
 @import 'tailwindcss';
 @import '@fontsource/gabriela';
+@import '@fontsource/noto-color-emoji';
+@import '@fontsource-variable/open-sans/wdth.css';
 
 @theme {
     --color-gold: #C97515;
@@ -11,15 +13,27 @@
 :root {
     color: var(--color-white);
     background-color: var(--color-black);
+
+    font-family: 'Open Sans Variable', 'Noto Color Emoji', serif;
+
+    scroll-behavior: smooth;
 }
 
 @layer base {
+    h1 {
+        @apply text-gold text-2xl font-semibold;
+    }
+
     h2 {
         @apply text-gold text-xl font-semibold;
     }
 
     h3 {
         @apply text-gold text-lg font-semibold;
+    }
+
+    h4 {
+        @apply text-gold text-lg font-medium;
     }
 
     p {

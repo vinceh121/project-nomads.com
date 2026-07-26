@@ -1,0 +1,23 @@
+---
+import Source from "./Source.astro";
+
+const { id, language, sources } = Astro.props as {
+	id: string,
+	language: string,
+	sources: Array<{href: string, image: string, title: string}>,
+};
+---
+
+<h3 id={id} class="text-3xl pt-20 pb-5">{language}</h3>
+
+<ul class="grid grid-cols-3 col-span-full justify-items-center">
+	{
+		sources.map(({href, image, title}) => (
+			<Source
+				href={href}
+				image={image}
+				title={title}
+			/>
+		))
+	}
+</ul>
