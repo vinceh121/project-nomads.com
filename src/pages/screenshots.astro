@@ -1,0 +1,30 @@
+---
+import BasicLayout from "../layouts/BasicLayout.astro";
+import firstSkritIsland from "../assets/screenshots/first-skrit-island.png";
+import Screenshot from "../components/screenshots/Screenshot.astro";
+
+const screenshots = [
+	{
+		screenshot: firstSkritIsland,
+		caption: "Caption here",
+	},
+];
+---
+
+<BasicLayout>
+	{
+		screenshots.map(({ screenshot, caption }) => (
+			<Screenshot screenshot={screenshot} caption={caption} />
+		))
+	}
+</BasicLayout>
+
+<script>
+	import { Lightbox } from "lightbox3";
+
+	Lightbox.init();
+</script>
+
+<style is:global>
+	@import "../../node_modules/lightbox3/dist/lightbox3.css";
+</style>
