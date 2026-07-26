@@ -3,7 +3,7 @@ import "../styles/global.css";
 import BaseLayout from './BaseLayout.astro'
 
 const paths = [
-    {path: '/game/', name: 'Game'},
+    {path: '/', name: 'Game'},
     {path: '/screenshots/', name: 'Screenshots'},
     {path: '/download/', name: 'Download'},
     {path: '/community/', name: 'Community'},
@@ -16,7 +16,7 @@ const paths = [
         {
             paths.map(
                 ({path, name}) =>
-                    <a class="duration-150 transition-all hover:brightness-150 hover:drop-shadow-lg hover:drop-shadow-bronze" href={path}>{name}</a>
+                    <a class="duration-150 transition-all hover:brightness-150 hover:drop-shadow-lg hover:drop-shadow-bronze text-bronze no-underline" href={path}>{name}</a>
             )
         }
     </nav>

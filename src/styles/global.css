@@ -39,4 +39,8 @@
     p {
         @apply py-2;
     }
+
+    a {
+        @apply text-gold underline;
+    }
 }
