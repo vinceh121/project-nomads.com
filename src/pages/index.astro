@@ -3,6 +3,7 @@ import "../styles/global.css";
 import Layout from "../layouts/Layout.astro";
 import hero from "../assets/hero.png";
 import artefacts from "../assets/home/artefacts.png";
+import island from "../assets/home/island.png";
 import { Picture } from "astro:assets";
 import Blurb from "../components/Blurb.astro";
 ---
@@ -15,6 +16,7 @@ import Blurb from "../components/Blurb.astro";
 			layout="full-width"
 			src={hero}
 			class="w-full mask-b-from-80%"
+			loading="eager"
 		/>
 	</div>
 
@@ -53,7 +55,7 @@ import Blurb from "../components/Blurb.astro";
 			</p>
 		</div>
 
-		<div class="mt-30 px-50">
+		<div class="mt-30 w-250 mx-auto">
 			<Blurb
 				picture={artefacts}
 				pictureAlt="Magical artifacts layed out on a floating island."
@@ -68,13 +70,15 @@ import Blurb from "../components/Blurb.astro";
 				</p>
 			</Blurb>
             <Blurb
-				picture={artefacts}
+				picture={island}
 				pictureAlt=""
                 reverse={true}
 			>
 				<h3>Battleship islands</h3>
 				<p>
-                    Your own island is a battleship bla bla bla
+                    Your flying island is your base. Use the magical artifacts to convert it
+					into a flying battleship. Equip your island with gun towers and aircraft
+					hangars and build power plants to improve our power supply.
 				</p>
 			</Blurb>
 		</div>
