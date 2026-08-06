@@ -8,7 +8,7 @@ const { id, language, sources } = Astro.props as {
 };
 ---
 
-<h3 id={id} class="text-3xl pt-20 pb-5">{language}</h3>
+<h3 id={id} class="text-3xl pt-20 pb-5"><a href={"#" + id} class="no-underline">{language}</a></h3>
 
 <ul class="grid grid-cols-3 col-span-full justify-items-center">
 	{

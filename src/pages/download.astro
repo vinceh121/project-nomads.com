@@ -1,6 +1,5 @@
 ---
 import Language from "../components/download/Language.astro";
-import Source from "../components/download/Source.astro";
 import BasicLayout from "../layouts/BasicLayout.astro";
 
 const languages = [
@@ -83,15 +82,6 @@ const languages = [
 
 <BasicLayout>
 	<h2 class="pb-5">Languages</h2>
-
-	<ul role="tablist" class="flex justify-evenly text-xl">
-		<li role="tab"><a href="#english">🇬🇧 English</a></li>
-		<li role="tab"><a href="#german">🇩🇪 German</a></li>
-		<li role="tab"><a href="#french">🇫🇷 French</a></li>
-		<li role="tab"><a href="#italian">🇮🇹 Italian</a></li>
-		<li role="tab"><a href="#russian">🇷🇺 Russian</a></li>
-		<li role="tab"><a href="#czech">🇨🇿 Czech</a></li>
-	</ul>
 
 	{languages.map(({id, language, sources}) => <Language id={id} language={language} sources={sources} />)}
 </BasicLayout>
