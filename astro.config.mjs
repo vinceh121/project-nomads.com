@@ -8,6 +8,7 @@ export default defineConfig({
   i18n: {
     locales: ['en', 'de', 'fr'],
     defaultLocale: 'en',
+    routing: "manual",
   },
   vite: {
     plugins: [tailwindcss()],

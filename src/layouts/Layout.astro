@@ -1,4 +1,5 @@
 ---
+import { getRelativeLocaleUrl } from "astro:i18n";
 import "../styles/global.css";
 import BaseLayout from './BaseLayout.astro'
 
@@ -8,7 +9,7 @@ const paths = [
     {path: '/download/', name: 'Download'},
     {path: '/community/', name: 'Community'},
     {path: '/about/', name: 'About'},
-];
+].map(path => ({...path, path: getRelativeLocaleUrl(Astro.currentLocale ?? 'en', path.path)}));
 ---
 
 <BaseLayout>
