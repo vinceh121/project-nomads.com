@@ -5,6 +5,7 @@ import artefacts from "../assets/home/artefacts.png";
 import island from "../assets/home/island.png";
 import { Picture } from "astro:assets";
 import Blurb from "../components/Blurb.astro";
+import Trans from "../components/Trans.astro";
 ---
 
 <Layout>
@@ -21,36 +22,48 @@ import Blurb from "../components/Blurb.astro";
 
 	<main class="pt-10">
 		<div class="mx-auto w-300 text-center">
-			<h2>After the disaster!</h2>
+			<h2><Trans>After the disaster!</Trans></h2>
 
 			<p>
-				<em>Project Nomads</em> is set on the planet Aeres, a fantastic world of gigantic
-				floating islands.
+				<Trans>
+					<em>Project Nomads</em> is set on the planet Aeres, a fantastic world of gigantic
+					floating islands.
+				</Trans>
 			</p>
 			<p>
-				Your battleship island glides majestically through the clouds. You are a
-				nomad, a restless wanderer forever in pursuit of adventure.
+				<Trans>
+					Your battleship island glides majestically through the clouds. You are a
+					nomad, a restless wanderer forever in pursuit of adventure.
+				</Trans>
 			</p>
 			<p>
-				Discover other islands, master the magic skills of the arcane master
-				builders and explore the ruins of their long forgotten culture.
+				<Trans>
+					Discover other islands, master the magic skills of the arcane master
+					builders and explore the ruins of their long forgotten culture.
+				</Trans>
 			</p>
 			<p>
-				Use the mysterious artifacts of the master builders to erect factories,
-				power plants and formidable gun towers on your flying island and prepare
-				yourself for the many challenges that await you.
+				<Trans>
+					Use the mysterious artifacts of the master builders to erect factories,
+					power plants and formidable gun towers on your flying island and prepare
+					yourself for the many challenges that await you.
+				</Trans>
 			</p>
 			<p>
-				Command airplanes, biplanes, modern fighters and bombers in the struggle for
-				the priceless magical artifacts, while your island pushes forward into new,
-				hitherto unknown regions of the world.
+				<Trans>
+					Command airplanes, biplanes, modern fighters and bombers in the struggle for
+					the priceless magical artifacts, while your island pushes forward into new,
+					hitherto unknown regions of the world.
+				</Trans>
 			</p>
 			<p>
-				Project Nomads combines the gameplay of an action shooter with that of a
-				real-time strategy and the complex story of a role-playing game.
+				<Trans>
+					Project Nomads combines the gameplay of an action shooter with that of a
+					real-time strategy and the complex story of a role-playing game.
+				</Trans>
 			</p>
 			<p>
-				<strong class="text-gold">The adventure begins...</strong>
+				<strong class="text-gold"><Trans>The adventure begins...</Trans></strong>
 			</p>
 		</div>
 
@@ -59,26 +72,30 @@ import Blurb from "../components/Blurb.astro";
 				picture={artefacts}
 				pictureAlt="Magical artifacts layed out on a floating island."
 			>
-				<h3>Ancient powerful artifacts</h3>
-				<p>
-					The ancient knowledge of the master builders is stored in magical
-					artifacts. These are the most priceless things in the world.
-				</p>
-				<p>
-					A large number of different artifacts may be found all over the world.
-				</p>
+				<Trans>
+					<h3>Ancient powerful artifacts</h3>
+					<p>
+						The ancient knowledge of the master builders is stored in magical
+						artifacts. These are the most priceless things in the world.
+					</p>
+					<p>
+						A large number of different artifacts may be found all over the world.
+					</p>
+				</Trans>
 			</Blurb>
             <Blurb
 				picture={island}
 				pictureAlt=""
                 reverse={true}
 			>
-				<h3>Battleship islands</h3>
-				<p>
-                    Your flying island is your base. Use the magical artifacts to convert it
-					into a flying battleship. Equip your island with gun towers and aircraft
-					hangars and build power plants to improve our power supply.
-				</p>
+				<Trans>
+					<h3>Battleship islands</h3>
+					<p>
+						Your flying island is your base. Use the magical artifacts to convert it
+						into a flying battleship. Equip your island with gun towers and aircraft
+						hangars and build power plants to improve our power supply.
+					</p>
+				</Trans>
 			</Blurb>
 		</div>
 	</main>
