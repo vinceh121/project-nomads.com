@@ -1,16 +1,16 @@
-name: Deployment
+name: Deploy production
 
 on:
   push:
-    branches: ["master"]
+    branches: ["production"]
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     environment:
-      name: Staging
-      url: https://staging.project-nomads.com/
+      name: Production
+      url: https://project-nomads.com/
     steps:
       - uses: actions/checkout@v3
       - name: Installing required JavaScript dependencies

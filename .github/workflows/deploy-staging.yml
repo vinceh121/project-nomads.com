@@ -1,0 +1,24 @@
+name: Deploy staging
+
+on:
+  push:
+    branches: ["master"]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    environment:
+      name: Staging
+      url: https://staging.project-nomads.com/
+    steps:
+      - uses: actions/checkout@v3
+      - name: Installing required JavaScript dependencies
+        run: npm i
+      - name: Build website
+        run: npm run build
+      - name: Deploy
+        run: |
+          eval $(ssh-agent -s)
+          echo "${{ secrets.REMOTE_KEY }}" | tr -d '\r' | ssh-add -
+          rsync -e 'ssh -o StrictHostKeyChecking=no' --delete --delete-after --dirs --recursive dist/ ${{ secrets.REMOTE_URL }}
