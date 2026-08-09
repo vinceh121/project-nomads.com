@@ -13,7 +13,7 @@ const { id, language, sources } = Astro.props as {
   <a href={"#" + id} class="no-underline"><Trans>{language}</Trans></a>
 </h3>
 
-<ul class="grid grid-cols-3 col-span-full justify-items-center">
+<ul class="grid lg:grid-cols-3 gap-5 col-span-full justify-items-center">
   {
     sources.map(({ href, image, title }) => (
       <Source href={href} image={image} title={title} />

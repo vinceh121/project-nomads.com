@@ -15,14 +15,14 @@ import Trans from "../components/Trans.astro";
       formats={["avif", "webp"]}
       layout="full-width"
       src={hero}
-      class="w-full mask-b-from-80%"
+      class="w-full mask-b-from-80% mask-t-from-80% lg:mask-t-to-0 lg:mask-t-from-100%"
       loading="eager"
       fetchpriority="high"
     />
   </div>
 
   <main class="pt-10">
-    <div class="mx-auto w-300 text-center">
+    <div class="mx-auto px-10 lg:max-w-300 text-center">
       <h2><Trans>After the disaster!</Trans></h2>
 
       <p>
@@ -69,7 +69,7 @@ import Trans from "../components/Trans.astro";
       </p>
     </div>
 
-    <div class="mt-30 w-250 mx-auto">
+    <div class="mt-30 lg:max-w-250 mx-auto">
       <Blurb
         picture={artefacts}
         pictureAlt="Magical artifacts layed out on a floating island."

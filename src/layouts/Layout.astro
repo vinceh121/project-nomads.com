@@ -45,7 +45,7 @@ const languages = [
 
 <BaseLayout>
   <nav
-    class="w-full flex justify-evenly text-bronze font-gabriela font-bold text-xl py-3 bg-neutral-950/20 absolute top-0 z-10"
+    class="w-full flex flex-col lg:flex-row text-center justify-evenly text-bronze font-gabriela font-bold text-xl py-3 bg-neutral-950/20 lg:absolute lg:top-0 lg:z-10"
   >
     {
       paths.map(({ path, name }) => (
@@ -62,7 +62,7 @@ const languages = [
   <slot />
 
   <footer class="bg-neutral-900 text-neutral-400 mt-50 py-10">
-    <div class="mx-auto w-400 grid grid-cols-3 gap-75">
+    <div class="mx-auto px-5 gap-5 grid lg:grid-cols-3 lg:w-400 lg:gap-75">
       <div>
         <Trans>
           Fan website not affiliated with any company related to Project Nomads
