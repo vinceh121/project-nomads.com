@@ -1,26 +1,100 @@
 ---
 import { getRelativeLocaleUrl } from "astro:i18n";
 import "../styles/global.css";
-import BaseLayout from './BaseLayout.astro'
+import BaseLayout from "./BaseLayout.astro";
+import Trans from "../components/Trans.astro";
 
 const paths = [
-    {path: '/', name: 'Game'},
-    {path: '/screenshots/', name: 'Screenshots'},
-    {path: '/download/', name: 'Download'},
-    {path: '/community/', name: 'Community'},
-    {path: '/about/', name: 'About'},
-].map(path => ({...path, path: getRelativeLocaleUrl(Astro.currentLocale ?? 'en', path.path)}));
+	{ path: "/", name: "Game" },
+	{ path: "/screenshots/", name: "Screenshots" },
+	{ path: "/download/", name: "Download" },
+	{ path: "/community/", name: "Community" },
+	{ path: "/about/", name: "About" },
+].map((path) => ({
+	...path,
+	path: getRelativeLocaleUrl(Astro.currentLocale ?? "en", path.path),
+}));
+
+const languages = [
+	{
+		code: "en",
+		label: "🇬🇧 English",
+	},
+	{
+		code: "de",
+		label: "🇩🇪 German",
+	},
+	{
+		code: "fr",
+		label: "🇫🇷 French",
+	},
+	{
+		code: "it",
+		label: "🇮🇹 Italian",
+	},
+	{
+		code: "ru",
+		label: "🇷🇺 Russian",
+	},
+	{
+		code: "cz",
+		label: "🇨🇿 Czech",
+	},
+];
 ---
 
 <BaseLayout>
-    <nav class="w-full flex justify-evenly text-bronze font-gabriela font-bold text-xl py-3 bg-neutral-950/20 absolute top-0 z-10">
-        {
-            paths.map(
-                ({path, name}) =>
-                    <a class="duration-150 transition-all hover:brightness-150 hover:drop-shadow-lg hover:drop-shadow-bronze text-bronze no-underline" href={path}>{name}</a>
-            )
-        }
-    </nav>
+	<nav
+		class="w-full flex justify-evenly text-bronze font-gabriela font-bold text-xl py-3 bg-neutral-950/20 absolute top-0 z-10"
+	>
+		{
+			paths.map(({ path, name }) => (
+				<a
+					class="duration-150 transition-all hover:brightness-150 hover:drop-shadow-lg hover:drop-shadow-bronze text-bronze no-underline"
+					href={path}
+				>
+					{name}
+				</a>
+			))
+		}
+	</nav>
 
-    <slot/>
+	<slot />
+
+	<footer class="bg-neutral-900 text-neutral-400 mt-50 py-10">
+		<div class="mx-auto w-300">
+			<Trans
+				>Fan website not affiliated with any company related to Project Nomads</Trans
+			>
+
+			<div class="float-right">
+				<select id="languageSelect">
+					{languages.map(({ code, label }) => <option class="bg-neutral-950" value={code} selected={code === Astro.currentLocale}>{label}</option>)}
+				</select>
+			</div>
+		</div>
+	</footer>
 </BaseLayout>
+
+<script>
+	const langSelect = document.getElementById(
+		"languageSelect",
+	) as HTMLSelectElement;
+
+	langSelect.addEventListener("input", () => {
+		const toLang = langSelect.value;
+		const currentLang = document.documentElement.lang;
+
+		if (currentLang === toLang) {
+			return;
+		}
+
+		if (currentLang === "en") {
+			location.pathname = `/${toLang}${location.pathname}`;
+		} else if (toLang === "en") {
+            location.pathname = location.pathname.replace(`/${currentLang}/`, "/");
+        } else {
+            location.pathname = location.pathname.replace(`/${currentLang}/`, `/${toLang}/`);
+        }
+	});
+</script>

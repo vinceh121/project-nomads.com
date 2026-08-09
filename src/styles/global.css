@@ -1,6 +1,6 @@
 @import 'tailwindcss';
 @import '@fontsource/gabriela';
-@import '@fontsource/noto-color-emoji';
+@import '@fontsource/noto-color-emoji/emoji.css';
 @import '@fontsource-variable/open-sans/wdth.css';
 
 @theme {
