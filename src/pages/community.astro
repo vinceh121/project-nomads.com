@@ -1,9 +1,16 @@
 ---
 import BasicLayout from "../layouts/BasicLayout.astro";
 import Trans from "../components/Trans.astro";
+import { gettext } from "../i18n";
 ---
 
-<BasicLayout>
+<BasicLayout
+  title={gettext(Astro.currentLocale, "Community")}
+  description={gettext(
+    Astro.currentLocale,
+    "Engage in the Project Nomads community.",
+  )}
+>
   <p>
     <Trans>
       You can join our <a href="https://discord.gg/j3sKWc8YQd" target="_blank"

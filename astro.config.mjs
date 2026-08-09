@@ -22,7 +22,21 @@ export default defineConfig({
     defaultStrategy: "viewport",
   },
 
-  integrations: [sitemap()],
+  integrations: [
+    sitemap({
+      i18n: {
+        defaultLocale: "en",
+        locales: {
+          en: "en-US",
+          de: "de-DE",
+          fr: "fr-FR",
+          it: "it-IT",
+          ru: "ru-RU",
+          cz: "cz-CZ",
+        },
+      },
+    }),
+  ],
 
   site: "https://project-nomads.com",
 });

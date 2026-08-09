@@ -20,7 +20,13 @@ const screenshots = [
 }));
 ---
 
-<BasicLayout>
+<BasicLayout
+  title={gettext(Astro.currentLocale, "Screenshots")}
+  description={gettext(
+    Astro.currentLocale,
+    "Screenshots of Project Nomads, the 2002 action RTS game.",
+  )}
+>
   <div class="flex gap-10 flex-wrap">
     {
       screenshots.map(({ screenshot, caption }) => (

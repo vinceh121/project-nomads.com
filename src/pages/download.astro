@@ -2,6 +2,7 @@
 import Language from "../components/download/Language.astro";
 import BasicLayout from "../layouts/BasicLayout.astro";
 import Trans from "../components/Trans.astro";
+import { gettext } from "../i18n";
 
 const languages = [
   {
@@ -81,7 +82,13 @@ const languages = [
 ];
 ---
 
-<BasicLayout>
+<BasicLayout
+  title={gettext(Astro.currentLocale, "Download")}
+  description={gettext(
+    Astro.currentLocale,
+    "Download Project Nomads in English, the 2002 action RTS.",
+  )}
+>
   <h2 class="pb-5"><Trans>Languages</Trans></h2>
 
   {

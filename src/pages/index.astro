@@ -6,9 +6,16 @@ import island from "../assets/home/island.png";
 import { Picture } from "astro:assets";
 import Blurb from "../components/Blurb.astro";
 import Trans from "../components/Trans.astro";
+import { gettext } from "../i18n";
 ---
 
-<Layout>
+<Layout
+  title="Project Nomads"
+  description={gettext(
+    Astro.currentLocale,
+    "Project Nomads is an action RTS steampunk game from 2002.",
+  )}
+>
   <div>
     <Picture
       alt="Project Nomads"
@@ -72,7 +79,7 @@ import Trans from "../components/Trans.astro";
     <div class="mt-30 lg:max-w-250 mx-auto">
       <Blurb
         picture={artefacts}
-        pictureAlt="Magical artifacts layed out on a floating island."
+        pictureAlt="Magical artifacts layed out on a floating island"
       >
         <Trans>
           <h3>Ancient powerful artifacts</h3>
@@ -86,7 +93,11 @@ import Trans from "../components/Trans.astro";
           </p>
         </Trans>
       </Blurb>
-      <Blurb picture={island} pictureAlt="" reverse={true}>
+      <Blurb
+        picture={island}
+        pictureAlt="An island with gun towers"
+        reverse={true}
+      >
         <Trans>
           <h3>Battleship islands</h3>
           <p>

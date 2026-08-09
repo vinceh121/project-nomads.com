@@ -2,6 +2,7 @@
 import BasicLayout from "../layouts/BasicLayout.astro";
 import Trans from "../components/Trans.astro";
 import { getRelativeLocaleUrl } from "astro:i18n";
+import { gettext } from "../i18n";
 
 const community = getRelativeLocaleUrl(
   Astro.currentLocale ?? "en",
@@ -9,7 +10,10 @@ const community = getRelativeLocaleUrl(
 );
 ---
 
-<BasicLayout>
+<BasicLayout
+  title={gettext(Astro.currentLocale, "About")}
+  description={gettext(Astro.currentLocale, "About Project Nomads.")}
+>
   <Trans>
     <p>
       This is a fan website made with ❤️ by <a href="https://vinceh121.me"

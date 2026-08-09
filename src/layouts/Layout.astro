@@ -41,9 +41,11 @@ const languages = [
     label: "🇨🇿 Czech",
   },
 ];
+
+const { title, description } = Astro.props;
 ---
 
-<BaseLayout>
+<BaseLayout {title} {description}>
   <nav
     class="w-full flex flex-col lg:flex-row text-center justify-evenly text-bronze font-gabriela font-bold text-xl py-3 bg-neutral-950/20 lg:absolute lg:top-0 lg:z-10"
   >
