@@ -1,6 +1,12 @@
 ---
 import BasicLayout from "../layouts/BasicLayout.astro";
 import Trans from "../components/Trans.astro";
+import { getRelativeLocaleUrl } from "astro:i18n";
+
+const community = getRelativeLocaleUrl(
+  Astro.currentLocale ?? "en",
+  "/community/",
+);
 ---
 
 <BasicLayout>
@@ -8,7 +14,7 @@ import Trans from "../components/Trans.astro";
     <p>
       This is a fan website made with ❤️ by <a href="https://vinceh121.me"
         >vinceh121</a
-      > and the <a href="/community/">community</a>.
+      > and the <a href={community}>community</a>.
     </p>
     <p>
       Not affiliated with any former or current companies officially related to

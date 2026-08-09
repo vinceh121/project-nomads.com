@@ -10,7 +10,8 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "style": "prettier . --write"
+    "style": "prettier . --write",
+    "update-i18n": "rm -f src/i18n/en.json && I18N_UPDATE_TEMPLATE=1 astro build"
   },
   "dependencies": {
     "@fontsource-variable/open-sans": "^5.3.0",

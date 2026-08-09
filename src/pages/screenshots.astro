@@ -1,13 +1,18 @@
 ---
 import BasicLayout from "../layouts/BasicLayout.astro";
 import firstSkritIsland from "../assets/screenshots/first-skrit-island.png";
+import athanor from "../assets/screenshots/athanor.png";
 import Screenshot from "../components/screenshots/Screenshot.astro";
 import { gettext } from "../i18n";
 
 const screenshots = [
   {
     screenshot: firstSkritIsland,
-    caption: "Caption here",
+    caption: "Discover long lost islands",
+  },
+  {
+    screenshot: athanor,
+    caption: "Great steampunk machines",
   },
 ].map((s) => ({
   ...s,
@@ -16,11 +21,13 @@ const screenshots = [
 ---
 
 <BasicLayout>
-  {
-    screenshots.map(({ screenshot, caption }) => (
-      <Screenshot screenshot={screenshot} caption={caption} />
-    ))
-  }
+  <div class="flex gap-10 flex-wrap">
+    {
+      screenshots.map(({ screenshot, caption }) => (
+        <Screenshot screenshot={screenshot} caption={caption} />
+      ))
+    }
+  </div>
 </BasicLayout>
 
 <script>

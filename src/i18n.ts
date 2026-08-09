@@ -1,4 +1,4 @@
-import { readFileSync, writeFileSync } from "node:fs";
+import { readFileSync, writeFileSync, existsSync } from "node:fs";
 import fr from "./i18n/fr.json";
 import de from "./i18n/de.json";
 
@@ -10,9 +10,19 @@ const languages: Record<string, Record<string, string>> = {
 };
 
 const insertEmptyKey = (source: string) => {
-  const english = JSON.parse(String(readFileSync(ENGLISH_PATH)));
+  const english = existsSync(ENGLISH_PATH)
+    ? JSON.parse(String(readFileSync(ENGLISH_PATH)))
+    : {};
   english[source] = source;
-  writeFileSync(ENGLISH_PATH, JSON.stringify(english, null, 2));
+
+  const entries = Object.entries(english).toSorted(([a], [b]) =>
+    a.localeCompare(b),
+  );
+
+  writeFileSync(
+    ENGLISH_PATH,
+    JSON.stringify(Object.fromEntries(entries), null, 2),
+  );
 };
 
 export const gettext = (locale: string | undefined, source: string) => {
