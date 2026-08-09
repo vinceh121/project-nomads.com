@@ -5,7 +5,8 @@ const { picture, pictureAlt, reverse } = Astro.props;
 ---
 
 <div
-  class={"mt-10 flex flex-col lg:flex-row gap-10 px-5" + (reverse ? " lg:flex-row-reverse" : "")}
+  class={"mt-10 flex flex-col lg:flex-row gap-10 px-5" +
+    (reverse ? " lg:flex-row-reverse" : "")}
 >
   <div>
     <Picture
@@ -15,7 +16,10 @@ const { picture, pictureAlt, reverse } = Astro.props;
       layout="full-width"
     />
   </div>
-  <div class={"grow self-center -mt-10" + (reverse ? " lg:text-right" : " lg:text-left")}>
+  <div
+    class={"grow self-center -mt-10" +
+      (reverse ? " lg:text-right" : " lg:text-left")}
+  >
     <slot />
   </div>
 </div>
