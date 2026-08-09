@@ -77,24 +77,32 @@ const languages = [
 </BaseLayout>
 
 <script>
-	const langSelect = document.getElementById(
-		"languageSelect",
-	) as HTMLSelectElement;
+	import { navigate } from "astro:transitions/client";
 
-	langSelect.addEventListener("input", () => {
-		const toLang = langSelect.value;
-		const currentLang = document.documentElement.lang;
+	document.addEventListener("astro:page-load", () => {
+		const langSelect = document.getElementById(
+			"languageSelect",
+		) as HTMLSelectElement;
 
-		if (currentLang === toLang) {
-			return;
-		}
+		langSelect.addEventListener("input", () => {
+			const toLang = langSelect.value;
+			const currentLang = document.documentElement.lang;
 
-		if (currentLang === "en") {
-			location.pathname = `/${toLang}${location.pathname}`;
-		} else if (toLang === "en") {
-            location.pathname = location.pathname.replace(`/${currentLang}/`, "/");
-        } else {
-            location.pathname = location.pathname.replace(`/${currentLang}/`, `/${toLang}/`);
-        }
+			if (currentLang === toLang) {
+				return;
+			}
+
+			let path;
+
+			if (currentLang === "en") {
+				path = `/${toLang}${location.pathname}`;
+			} else if (toLang === "en") {
+				path = location.pathname.replace(`/${currentLang}/`, "/");
+			} else {
+				path = location.pathname.replace(`/${currentLang}/`, `/${toLang}/`);
+			}
+
+			navigate(path);
+		});
 	});
 </script>
