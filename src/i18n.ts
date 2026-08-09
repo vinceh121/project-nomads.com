@@ -12,7 +12,7 @@ const languages: Record<string, Record<string, string>> = {
 const insertEmptyKey = (source: string) => {
   const english = JSON.parse(String(readFileSync(ENGLISH_PATH)));
   english[source] = source;
-  writeFileSync(ENGLISH_PATH, JSON.stringify(english, null, 4));
+  writeFileSync(ENGLISH_PATH, JSON.stringify(english, null, 2));
 };
 
 export const gettext = (locale: string | undefined, source: string) => {
