@@ -2,13 +2,14 @@
 import BasicLayout from "../layouts/BasicLayout.astro";
 import firstSkritIsland from "../assets/screenshots/first-skrit-island.png";
 import Screenshot from "../components/screenshots/Screenshot.astro";
+import { gettext } from "../i18n";
 
 const screenshots = [
 	{
 		screenshot: firstSkritIsland,
 		caption: "Caption here",
 	},
-];
+].map((s) => ({ ...s, caption: gettext(Astro.currentLocale, s.caption) ?? "" }));
 ---
 
 <BasicLayout>

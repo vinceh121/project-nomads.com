@@ -1,9 +1,18 @@
+import {readFileSync, writeFile, writeFileSync} from "node:fs";
 import fr from "./i18n/fr.json";
 import de from "./i18n/de.json";
+
+const ENGLISH_PATH = "./src/i18n/en.json";
 
 const languages: Record<string, Record<string, string>> = {
 	fr,
 	de
+};
+
+const insertEmptyKey = (source: string) => {
+	const english = JSON.parse(String(readFileSync(ENGLISH_PATH)));
+	english[source] = source;
+	writeFileSync(ENGLISH_PATH, JSON.stringify(english, null, 4));
 };
 
 export const gettext = (locale: string|undefined, source: string) => {
@@ -11,5 +20,11 @@ export const gettext = (locale: string|undefined, source: string) => {
 		return source;
 	}
 
-	return languages[locale]?.[source];
+	const value = languages[locale]?.[source];
+
+	if (process.env.I18N_UPDATE_TEMPLATE) {
+		insertEmptyKey(source);
+	}
+
+	return value ?? source;
 };

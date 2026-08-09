@@ -1,5 +1,6 @@
 ---
 import Source from "./Source.astro";
+import Trans from "../Trans.astro";
 
 const { id, language, sources } = Astro.props as {
 	id: string,
@@ -8,7 +9,7 @@ const { id, language, sources } = Astro.props as {
 };
 ---
 
-<h3 id={id} class="text-3xl pt-20 pb-5"><a href={"#" + id} class="no-underline">{language}</a></h3>
+<h3 id={id} class="text-3xl pt-20 pb-5"><a href={"#" + id} class="no-underline"><Trans>{language}</Trans></a></h3>
 
 <ul class="grid grid-cols-3 col-span-full justify-items-center">
 	{
