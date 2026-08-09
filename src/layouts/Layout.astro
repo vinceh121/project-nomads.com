@@ -62,12 +62,23 @@ const languages = [
   <slot />
 
   <footer class="bg-neutral-900 text-neutral-400 mt-50 py-10">
-    <div class="mx-auto w-300">
-      <Trans
-        >Fan website not affiliated with any company related to Project Nomads</Trans
-      >
+    <div class="mx-auto w-400 grid grid-cols-3 gap-75">
+      <div>
+        <Trans>
+          Fan website not affiliated with any company related to Project Nomads
+        </Trans>
+      </div>
 
-      <div class="float-right">
+      <div>
+        <a
+          href={`https://weblate.vinceh121.me/engage/project-nomads-website/-/${Astro.currentLocale}/`}
+          class="text-neutral-400 no-underline hover:underline"
+        >
+          <Trans>Help translate this website</Trans>
+        </a>
+      </div>
+
+      <div>
         <select id="languageSelect">
           {
             languages.map(({ code, label }) => (
