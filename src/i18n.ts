@@ -1,4 +1,4 @@
-import {readFileSync, writeFile, writeFileSync} from "node:fs";
+import {readFileSync, writeFileSync} from "node:fs";
 import fr from "./i18n/fr.json";
 import de from "./i18n/de.json";
 
