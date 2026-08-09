@@ -4,16 +4,18 @@ import { Picture } from "astro:assets";
 const { picture, pictureAlt, reverse } = Astro.props;
 ---
 
-<div class={"mt-10 flex flex-row gap-10" + (reverse ? " flex-row-reverse" : "" )}>
-	<div class="w-300">
-		<Picture
-			alt={pictureAlt}
-			src={picture}
-			formats={["avif", "webp"]}
-			layout="full-width"
-		/>
-	</div>
-	<div class={"grow self-center" + (reverse ? " text-right" : " text-left")}>
-		<slot />
-	</div>
+<div
+  class={"mt-10 flex flex-row gap-10" + (reverse ? " flex-row-reverse" : "")}
+>
+  <div class="w-300">
+    <Picture
+      alt={pictureAlt}
+      src={picture}
+      formats={["avif", "webp"]}
+      layout="full-width"
+    />
+  </div>
+  <div class={"grow self-center" + (reverse ? " text-right" : " text-left")}>
+    <slot />
+  </div>
 </div>

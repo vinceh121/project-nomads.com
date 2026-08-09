@@ -1,11 +1,11 @@
 ---
 import { Image, getImage } from "astro:assets";
 
-const {screenshot, caption} = Astro.props;
+const { screenshot, caption } = Astro.props;
 
-const href = await getImage({src: screenshot});
+const href = await getImage({ src: screenshot });
 ---
 
 <a href={href.src} data-lightbox="gallery" data-caption={caption}>
-	<Image src={screenshot} alt={caption} height={128} />
+  <Image src={screenshot} alt={caption} height={128} />
 </a>

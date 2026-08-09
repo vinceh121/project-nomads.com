@@ -5,27 +5,30 @@ import Screenshot from "../components/screenshots/Screenshot.astro";
 import { gettext } from "../i18n";
 
 const screenshots = [
-	{
-		screenshot: firstSkritIsland,
-		caption: "Caption here",
-	},
-].map((s) => ({ ...s, caption: gettext(Astro.currentLocale, s.caption) ?? "" }));
+  {
+    screenshot: firstSkritIsland,
+    caption: "Caption here",
+  },
+].map((s) => ({
+  ...s,
+  caption: gettext(Astro.currentLocale, s.caption) ?? "",
+}));
 ---
 
 <BasicLayout>
-	{
-		screenshots.map(({ screenshot, caption }) => (
-			<Screenshot screenshot={screenshot} caption={caption} />
-		))
-	}
+  {
+    screenshots.map(({ screenshot, caption }) => (
+      <Screenshot screenshot={screenshot} caption={caption} />
+    ))
+  }
 </BasicLayout>
 
 <script>
-	import { Lightbox } from "lightbox3";
+  import { Lightbox } from "lightbox3";
 
-	Lightbox.init();
+  Lightbox.init();
 </script>
 
 <style is:global>
-	@import "../../node_modules/lightbox3/dist/lightbox3.css";
+  @import "../../node_modules/lightbox3/dist/lightbox3.css";
 </style>

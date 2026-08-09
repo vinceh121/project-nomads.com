@@ -4,85 +4,89 @@ import BasicLayout from "../layouts/BasicLayout.astro";
 import Trans from "../components/Trans.astro";
 
 const languages = [
-	{
-		id: "english",
-		language: "🇬🇧 English",
-		sources: [
-			{
-				href: "https://www.myabandonware.com/game/project-nomads-bgv#Windows",
-				image: "myabandonware",
-			},
-			{
-				href: "https://archive.org/details/projectnomads",
-				image: "internetarchive",
-			},
-			{
-				href: "https://archive.org/details/ProjectNomadsDemo",
-				image: "internetarchive",
-				title: "Demo",
-			},
-		],
-	},
-	{
-		id: "german",
-		language: "🇩🇪 German",
-		sources: [
-			{
-				href: "https://www.myabandonware.com/game/project-nomads-bgv#Windows",
-				image: "myabandonware",
-			},
-		],
-	},
-	{
-		id: "french",
-		language: "🇫🇷 French",
-		sources: [
-			{
-				href: "https://www.myabandonware.com/game/project-nomads-bgv#Windows",
-				image: "myabandonware"
-			},
-			{
-				href: "https://archive.org/details/project-nomads-fr",
-				image: "internetarchive",
-			},
-		],
-	},
-	{
-		id: "italian",
-		language: "🇮🇹 Italian",
-		sources: [
-			{
-				href: "https://archive.org/details/project-nomads-ita",
-				image: "internetarchive",
-			},
-		],
-	},
-	{
-		id: "russian",
-		language: "🇷🇺 Russian",
-		sources: [
-			{
-				href: "https://www.myabandonware.com/game/project-nomads-bgv#Windows",
-				image: "myabandonware"
-			},
-		],
-	},
-	{
-		id: "czech",
-		language: "🇨🇿 Czech",
-		sources: [
-			{
-				href: "https://archive.org/download/czlevel138dvd/Level_2006-04_138_DVD_Project-Nomads.iso/Extra%2FProject%20Nomads%20-%20cestina%2FProject_Nomads_CZ101.exe",
-				image: "internetarchive",
-				title: "Patch for English",
-			},
-		],
-	},
+  {
+    id: "english",
+    language: "🇬🇧 English",
+    sources: [
+      {
+        href: "https://www.myabandonware.com/game/project-nomads-bgv#Windows",
+        image: "myabandonware",
+      },
+      {
+        href: "https://archive.org/details/projectnomads",
+        image: "internetarchive",
+      },
+      {
+        href: "https://archive.org/details/ProjectNomadsDemo",
+        image: "internetarchive",
+        title: "Demo",
+      },
+    ],
+  },
+  {
+    id: "german",
+    language: "🇩🇪 German",
+    sources: [
+      {
+        href: "https://www.myabandonware.com/game/project-nomads-bgv#Windows",
+        image: "myabandonware",
+      },
+    ],
+  },
+  {
+    id: "french",
+    language: "🇫🇷 French",
+    sources: [
+      {
+        href: "https://www.myabandonware.com/game/project-nomads-bgv#Windows",
+        image: "myabandonware",
+      },
+      {
+        href: "https://archive.org/details/project-nomads-fr",
+        image: "internetarchive",
+      },
+    ],
+  },
+  {
+    id: "italian",
+    language: "🇮🇹 Italian",
+    sources: [
+      {
+        href: "https://archive.org/details/project-nomads-ita",
+        image: "internetarchive",
+      },
+    ],
+  },
+  {
+    id: "russian",
+    language: "🇷🇺 Russian",
+    sources: [
+      {
+        href: "https://www.myabandonware.com/game/project-nomads-bgv#Windows",
+        image: "myabandonware",
+      },
+    ],
+  },
+  {
+    id: "czech",
+    language: "🇨🇿 Czech",
+    sources: [
+      {
+        href: "https://archive.org/download/czlevel138dvd/Level_2006-04_138_DVD_Project-Nomads.iso/Extra%2FProject%20Nomads%20-%20cestina%2FProject_Nomads_CZ101.exe",
+        image: "internetarchive",
+        title: "Patch for English",
+      },
+    ],
+  },
 ];
 ---
 
 <BasicLayout>
-	<h2 class="pb-5"><Trans>Languages</Trans></h2>
+  <h2 class="pb-5"><Trans>Languages</Trans></h2>
 
-	{languages.map(({id, language, sources}) => <Language id={id} language={language} sources={sources} />)}
+  {
+    languages.map(({ id, language, sources }) => (
+      <Language id={id} language={language} sources={sources} />
+    ))
+  }
 </BasicLayout>

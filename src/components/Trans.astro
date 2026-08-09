@@ -1,7 +1,9 @@
 ---
 import { gettext } from "../i18n";
 
-const key = (await Astro.slots.render("default")).trim().replaceAll(/\s+/g, " ");
+const key = (await Astro.slots.render("default"))
+  .trim()
+  .replaceAll(/\s+/g, " ");
 const value = gettext(Astro.currentLocale, key);
 ---
 
