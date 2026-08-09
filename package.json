@@ -16,7 +16,7 @@
     "@fontsource/gabriela": "^5.2.8",
     "@fontsource/noto-color-emoji": "^5.3.0",
     "@tailwindcss/vite": "^4.2.4",
-    "astro": "^6.3.0",
+    "astro": "^7.2.0",
     "lightbox3": "^1.2.1",
     "sharp": "^0.35.2",
     "tailwindcss": "^4.2.4"
