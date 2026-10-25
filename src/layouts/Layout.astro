@@ -11,7 +11,7 @@ const paths = [
   { path: "/download/", name: "Download" },
   { path: "/community/", name: "Community" },
   { path: "/about/", name: "About" },
-].map(({name, path}) => ({
+].map(({ name, path }) => ({
   name: gettext(Astro.currentLocale, name),
   path: getRelativeLocaleUrl(Astro.currentLocale ?? "en", path),
 }));
