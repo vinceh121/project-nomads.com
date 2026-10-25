@@ -14,12 +14,12 @@
     "update-i18n": "rm -f src/i18n/en.json && I18N_UPDATE_TEMPLATE=1 astro build"
   },
   "dependencies": {
-    "@astrojs/sitemap": "^3.7.3",
+    "@astrojs/sitemap": "^3.7.4",
     "@fontsource-variable/open-sans": "^5.3.0",
     "@fontsource/gabriela": "^5.2.8",
     "@fontsource/noto-color-emoji": "^5.3.0",
     "@tailwindcss/vite": "^4.2.4",
-    "astro": "^7.2.0",
+    "astro": "^7.4.2",
     "lightbox3": "^1.2.1",
     "sharp": "^0.35.2",
     "tailwindcss": "^4.2.4"
