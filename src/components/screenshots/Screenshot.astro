@@ -1,9 +1,9 @@
 ---
-import { Image, getImage } from "astro:assets";
+import { Image, getImage } from 'astro:assets'
 
-const { screenshot, caption } = Astro.props;
+const { screenshot, caption } = Astro.props
 
-const href = await getImage({ src: screenshot });
+const href = await getImage({ src: screenshot })
 ---
 
 <a

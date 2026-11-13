@@ -1,25 +1,25 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import hero from "../assets/hero.png";
-import artefacts from "../assets/home/artefacts.png";
-import island from "../assets/home/island.png";
-import { Picture } from "astro:assets";
-import Blurb from "../components/Blurb.astro";
-import Trans from "../components/Trans.astro";
-import { gettext } from "../i18n";
+import Layout from '../layouts/Layout.astro'
+import hero from '../assets/hero.png'
+import artefacts from '../assets/home/artefacts.png'
+import island from '../assets/home/island.png'
+import { Picture } from 'astro:assets'
+import Blurb from '../components/Blurb.astro'
+import Trans from '../components/Trans.astro'
+import { gettext } from '../i18n'
 ---
 
 <Layout
   title="Project Nomads"
   description={gettext(
     Astro.currentLocale,
-    "Project Nomads is an action RTS steampunk game from 2002.",
+    'Project Nomads is an action RTS steampunk game from 2002.'
   )}
 >
   <div>
     <Picture
       alt="Project Nomads"
-      formats={["avif", "webp"]}
+      formats={['avif', 'webp']}
       layout="full-width"
       src={hero}
       class="w-full mask-b-from-80% mask-t-from-80% lg:mask-t-to-0 lg:mask-t-from-100%"

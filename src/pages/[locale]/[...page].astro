@@ -1,11 +1,11 @@
 ---
-import type { GetStaticPaths } from "astro";
-import { i18n } from "astro:config/server";
+import type { GetStaticPaths } from 'astro'
+import { i18n } from 'astro:config/server'
 
 export const getStaticPaths = (async () => {
-  const pages = ["about", "community", "download", "", "screenshots"];
+  const pages = ['about', 'community', 'download', '', 'screenshots']
 
-  const locales = i18n!.locales as string[];
+  const locales = i18n!.locales as string[]
 
   return locales.flatMap((locale) =>
     pages.map((page) => ({
@@ -13,7 +13,7 @@ export const getStaticPaths = (async () => {
         locale,
         page,
       },
-    })),
-  );
-}) satisfies GetStaticPaths;
+    }))
+  )
+}) satisfies GetStaticPaths
 ---

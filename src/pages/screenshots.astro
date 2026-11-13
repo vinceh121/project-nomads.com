@@ -1,30 +1,30 @@
 ---
-import BasicLayout from "../layouts/BasicLayout.astro";
-import firstSkritIsland from "../assets/screenshots/first-skrit-island.png";
-import athanor from "../assets/screenshots/athanor.png";
-import Screenshot from "../components/screenshots/Screenshot.astro";
-import { gettext } from "../i18n";
+import BasicLayout from '../layouts/BasicLayout.astro'
+import firstSkritIsland from '../assets/screenshots/first-skrit-island.png'
+import athanor from '../assets/screenshots/athanor.png'
+import Screenshot from '../components/screenshots/Screenshot.astro'
+import { gettext } from '../i18n'
 
 const screenshots = [
   {
     screenshot: firstSkritIsland,
-    caption: "Discover long lost islands",
+    caption: 'Discover long lost islands',
   },
   {
     screenshot: athanor,
-    caption: "Great steampunk machines",
+    caption: 'Great steampunk machines',
   },
 ].map((s) => ({
   ...s,
-  caption: gettext(Astro.currentLocale, s.caption) ?? "",
-}));
+  caption: gettext(Astro.currentLocale, s.caption) ?? '',
+}))
 ---
 
 <BasicLayout
-  title={gettext(Astro.currentLocale, "Screenshots")}
+  title={gettext(Astro.currentLocale, 'Screenshots')}
   description={gettext(
     Astro.currentLocale,
-    "Screenshots of Project Nomads, the 2002 action RTS game.",
+    'Screenshots of Project Nomads, the 2002 action RTS game.'
   )}
 >
   <div class="flex gap-10 flex-wrap">
@@ -37,11 +37,11 @@ const screenshots = [
 </BasicLayout>
 
 <script>
-  import { Lightbox } from "lightbox3";
+  import { Lightbox } from 'lightbox3'
 
-  Lightbox.init();
+  Lightbox.init()
 </script>
 
 <style is:global>
-  @import "../../node_modules/lightbox3/dist/lightbox3.css";
+  @import '../../node_modules/lightbox3/dist/lightbox3.css';
 </style>

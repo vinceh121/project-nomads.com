@@ -1,23 +1,23 @@
 ---
-import myabandonware from "../../assets/myabandonware.png";
-import internetarchive from "../../assets/internetarchive.png";
-import oldnomads from "../../assets/old_nomads.png";
-import Picture from "astro/components/Picture.astro";
-import Trans from "../Trans.astro";
+import myabandonware from '../../assets/myabandonware.png'
+import internetarchive from '../../assets/internetarchive.png'
+import oldnomads from '../../assets/old_nomads.png'
+import Picture from 'astro/components/Picture.astro'
+import Trans from '../Trans.astro'
 
 const { title, href, image } = Astro.props as {
-  title?: string;
-  href: string;
-  image: "myabandonware" | "internetarchive";
-};
+  title?: string
+  href: string
+  image: 'myabandonware' | 'internetarchive'
+}
 
 const actualImage = {
   myabandonware,
   internetarchive,
-  oldnomads
-}[image];
+  oldnomads,
+}[image]
 
-const anchorAttrs = href.startsWith('/') ? {} : {target: "_blank"}
+const anchorAttrs = href.startsWith('/') ? {} : { target: '_blank' }
 ---
 
 <li class="size-50">

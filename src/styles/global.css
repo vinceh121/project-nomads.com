@@ -1,20 +1,20 @@
-@import "tailwindcss";
-@import "@fontsource/gabriela";
-@import "@fontsource/noto-color-emoji/emoji.css";
-@import "@fontsource-variable/open-sans/wdth.css";
+@import 'tailwindcss';
+@import '@fontsource/gabriela';
+@import '@fontsource/noto-color-emoji/emoji.css';
+@import '@fontsource-variable/open-sans/wdth.css';
 
 @theme {
   --color-gold: #c97515;
   --color-bronze: #e8d6a5;
 
-  --font-gabriela: "Gabriela", serif;
+  --font-gabriela: 'Gabriela', serif;
 }
 
 :root {
   color: var(--color-white);
   background-color: var(--color-black);
 
-  font-family: "Open Sans Variable", "Noto Color Emoji", serif;
+  font-family: 'Open Sans Variable', 'Noto Color Emoji', serif;
 
   scroll-behavior: smooth;
 }

@@ -1,13 +1,13 @@
 ---
-import { ClientRouter } from "astro:transitions";
+import { ClientRouter } from 'astro:transitions'
 
-const { title, description } = Astro.props;
-const fullTitle = title + " – Project Nomads";
-const path = Astro.url.pathname;
+const { title, description } = Astro.props
+const fullTitle = title + ' – Project Nomads'
+const path = Astro.url.pathname
 ---
 
 <!doctype html>
-<html lang={Astro.currentLocale ?? "en"}>
+<html lang={Astro.currentLocale ?? 'en'}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -15,7 +15,7 @@ const path = Astro.url.pathname;
     <link rel="icon" href="/favicon.ico" />
     <link rel="sitemap" href="/sitemap-index.xml" />
 
-    <meta property="og:url" content={"https://project-nomads.com" + path} />
+    <meta property="og:url" content={'https://project-nomads.com' + path} />
     <meta property="og:title" content={fullTitle} />
     <meta property="og:image" content="https://project-nomads.com/hero.webp" />
     <meta property="og:site_name" content="Project Nomads" />

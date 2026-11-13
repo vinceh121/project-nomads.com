@@ -1,16 +1,16 @@
 // @ts-check
-import { defineConfig } from "astro/config";
+import { defineConfig } from 'astro/config'
 
-import tailwindcss from "@tailwindcss/vite";
+import tailwindcss from '@tailwindcss/vite'
 
-import sitemap from "@astrojs/sitemap";
+import sitemap from '@astrojs/sitemap'
 
 // https://astro.build/config
 export default defineConfig({
   i18n: {
-    locales: ["en", "de", "fr", "it", "ru", "cz"],
-    defaultLocale: "en",
-    routing: "manual",
+    locales: ['en', 'de', 'fr', 'it', 'ru', 'cz'],
+    defaultLocale: 'en',
+    routing: 'manual',
   },
 
   vite: {
@@ -19,24 +19,24 @@ export default defineConfig({
 
   prefetch: {
     prefetchAll: true,
-    defaultStrategy: "viewport",
+    defaultStrategy: 'viewport',
   },
 
   integrations: [
     sitemap({
       i18n: {
-        defaultLocale: "en",
+        defaultLocale: 'en',
         locales: {
-          en: "en-US",
-          de: "de-DE",
-          fr: "fr-FR",
-          it: "it-IT",
-          ru: "ru-RU",
-          cz: "cz-CZ",
+          en: 'en-US',
+          de: 'de-DE',
+          fr: 'fr-FR',
+          it: 'it-IT',
+          ru: 'ru-RU',
+          cz: 'cz-CZ',
         },
       },
     }),
   ],
 
-  site: "https://project-nomads.com",
-});
+  site: 'https://project-nomads.com',
+})

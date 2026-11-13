@@ -1,102 +1,102 @@
 ---
-import Language from "../components/download/Language.astro";
-import BasicLayout from "../layouts/BasicLayout.astro";
-import Trans from "../components/Trans.astro";
-import { gettext } from "../i18n";
+import Language from '../components/download/Language.astro'
+import BasicLayout from '../layouts/BasicLayout.astro'
+import Trans from '../components/Trans.astro'
+import { gettext } from '../i18n'
 
 const languages = [
   {
-    id: "english",
-    language: "🇬🇧 English",
+    id: 'english',
+    language: '🇬🇧 English',
     sources: [
       {
-        href: "https://www.myabandonware.com/game/project-nomads-bgv#Windows",
-        image: "myabandonware",
+        href: 'https://www.myabandonware.com/game/project-nomads-bgv#Windows',
+        image: 'myabandonware',
       },
       {
-        href: "https://archive.org/details/projectnomads",
-        image: "internetarchive",
+        href: 'https://archive.org/details/projectnomads',
+        image: 'internetarchive',
       },
       {
-        href: "https://archive.org/details/ProjectNomadsDemo",
-        image: "internetarchive",
-        title: "Demo",
+        href: 'https://archive.org/details/ProjectNomadsDemo',
+        image: 'internetarchive',
+        title: 'Demo',
       },
     ],
   },
   {
-    id: "german",
-    language: "🇩🇪 German",
+    id: 'german',
+    language: '🇩🇪 German',
     sources: [
       {
-        href: "https://www.myabandonware.com/game/project-nomads-bgv#Windows",
-        image: "myabandonware",
+        href: 'https://www.myabandonware.com/game/project-nomads-bgv#Windows',
+        image: 'myabandonware',
       },
     ],
   },
   {
-    id: "french",
-    language: "🇫🇷 French",
+    id: 'french',
+    language: '🇫🇷 French',
     sources: [
       {
-        href: "https://www.myabandonware.com/game/project-nomads-bgv#Windows",
-        image: "myabandonware",
+        href: 'https://www.myabandonware.com/game/project-nomads-bgv#Windows',
+        image: 'myabandonware',
       },
       {
-        href: "https://archive.org/details/project-nomads-fr",
-        image: "internetarchive",
+        href: 'https://archive.org/details/project-nomads-fr',
+        image: 'internetarchive',
       },
     ],
   },
   {
-    id: "italian",
-    language: "🇮🇹 Italian",
+    id: 'italian',
+    language: '🇮🇹 Italian',
     sources: [
       {
-        href: "https://archive.org/details/project-nomads-ita",
-        image: "internetarchive",
+        href: 'https://archive.org/details/project-nomads-ita',
+        image: 'internetarchive',
       },
     ],
   },
   {
-    id: "russian",
-    language: "🇷🇺 Russian",
+    id: 'russian',
+    language: '🇷🇺 Russian',
     sources: [
       {
-        href: "https://www.myabandonware.com/game/project-nomads-bgv#Windows",
-        image: "myabandonware",
+        href: 'https://www.myabandonware.com/game/project-nomads-bgv#Windows',
+        image: 'myabandonware',
       },
     ],
   },
   {
-    id: "czech",
-    language: "🇨🇿 Czech",
+    id: 'czech',
+    language: '🇨🇿 Czech',
     sources: [
       {
-        href: "https://archive.org/download/czlevel138dvd/Level_2006-04_138_DVD_Project-Nomads.iso/Extra%2FProject%20Nomads%20-%20cestina%2FProject_Nomads_CZ101.exe",
-        image: "internetarchive",
-        title: "Patch for English",
+        href: 'https://archive.org/download/czlevel138dvd/Level_2006-04_138_DVD_Project-Nomads.iso/Extra%2FProject%20Nomads%20-%20cestina%2FProject_Nomads_CZ101.exe',
+        image: 'internetarchive',
+        title: 'Patch for English',
       },
     ],
   },
   {
-    id: "archives",
-    language: "Archives",
+    id: 'archives',
+    language: 'Archives',
     sources: [
       {
-        href: "/archives",
-        image: "oldnomads",
+        href: '/archives',
+        image: 'oldnomads',
       },
     ],
   },
-];
+]
 ---
 
 <BasicLayout
-  title={gettext(Astro.currentLocale, "Download")}
+  title={gettext(Astro.currentLocale, 'Download')}
   description={gettext(
     Astro.currentLocale,
-    "Download Project Nomads in English, the 2002 action RTS.",
+    'Download Project Nomads in English, the 2002 action RTS.'
   )}
 >
   <h2 class="pb-5"><Trans>Languages</Trans></h2>

@@ -1,13 +1,13 @@
 ---
-import BasicLayout from "../layouts/BasicLayout.astro";
-import Trans from "../components/Trans.astro";
-import { getRelativeLocaleUrl } from "astro:i18n";
-import { gettext } from "../i18n";
+import BasicLayout from '../layouts/BasicLayout.astro'
+import Trans from '../components/Trans.astro'
+import { getRelativeLocaleUrl } from 'astro:i18n'
+import { gettext } from '../i18n'
 ---
 
 <BasicLayout
-  title={gettext(Astro.currentLocale, "About")}
-  description={gettext(Astro.currentLocale, "About Project Nomads.")}
+  title={gettext(Astro.currentLocale, 'About')}
+  description={gettext(Astro.currentLocale, 'About Project Nomads.')}
 >
   <Trans>
     <p>
