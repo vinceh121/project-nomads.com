@@ -1,4 +1,5 @@
 ---
+import Trans from '../components/Trans.astro'
 import { gettext } from '../i18n'
 import BasicLayout from '../layouts/BasicLayout.astro'
 ---
@@ -10,23 +11,27 @@ import BasicLayout from '../layouts/BasicLayout.astro'
     'Archives of old Project Nomads builds'
   )}
 >
-  <p>
-    This archive contains historical Project Nomads files. Including:
+  <h1><Trans>Archives</Trans></h1>
 
-    <ul>
-      <li>Productor demo builds from 2000</li>
-      <li>Xbox builds</li>
-      <li>Pre-production CD masters</li>
-      <li>Beta PC builds</li>
-      <li>Mac builds</li>
-      <li>Bugfix patches</li>
-    </ul>
+  <p>
+    <Trans
+      >This archive contains historical Project Nomads files. Including:
+
+      <ul>
+        <li>Productor demo builds from 2000</li>
+        <li>Xbox builds</li>
+        <li>Pre-production CD masters</li>
+        <li>Beta PC builds</li>
+        <li>Mac builds</li>
+        <li>Bugfix patches</li>
+      </ul>
+    </Trans>
   </p>
 
   <a
     href="https://cdn.vinceh121.me/upload/nomads-builds-639b688cdac2264143986522b685f5534c33351d22eb2cf9210c1bf11b03b04d57b2428997d201cd2ed57421caa944ef85a0a71c94d47c2873b887813447b69f.zip"
   >
-    Download archive (5.1&nbsp;GB)
+    <Trans>Download archive (5.1&nbsp;GB)</Trans>
   </a>
 </BasicLayout>
 
