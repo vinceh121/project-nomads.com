@@ -87,6 +87,7 @@ const { title, description } = Astro.props
                 class="bg-neutral-950"
                 value={code}
                 selected={code === Astro.currentLocale}
+                aria-label={gettext(Astro.currentLocale, "Language selection")}
               >
                 {label}
               </option>
